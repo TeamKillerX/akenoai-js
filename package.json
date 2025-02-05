@@ -1,0 +1,46 @@
+{
+  "name": "akenoaijs",
+  "version": "2.0.0",
+  "description": "Scrapper AI all Downloader & User etc",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "AI",
+    "Anime",
+    "Waifu",
+    "Scraper",
+    "Downloader",
+    "TikTok",
+    "Instagram",
+    "Capcut",
+    "Google Drive",
+    "MediaFire",
+    "Facebook",
+    "Twitter",
+    "Spotify",
+    "Pinterest",
+    "Sfile",
+    "YouTube",
+    "Scraper tools",
+    "Data scraping",
+    "Content downloader",
+    "Social media downloader",
+    "Audio downloader",
+    "Video downloader",
+    "chatgpt",
+    "blackbox",
+    "bing",
+    "Scraper API",
+    "Social API"
+  ],
+  "author": "@xtsea",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeamKillerX/akenoai-js"
+  },
+  "homepage": "https://buymeacoffee.com/randydev",
+  "dependencies": {
+    "axios": "*"
+  }
+}
