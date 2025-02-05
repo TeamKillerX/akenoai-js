@@ -56,7 +56,11 @@ class AkenoaiJs {
                     params: params,
                 });
             }
-            return custom_dev ? response.data : null;
+            if (custom_dev) {
+                return response.data;
+            } else {
+                return null;
+            }
         } catch (error) {
             console.error("Error:", error);
             return null;
