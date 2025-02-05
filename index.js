@@ -1,6 +1,6 @@
-const axios = require('axios');
-const fs = require('fs');
-const FormData = require('form-data');
+import axios from 'axios';
+import fs from 'fs';
+import FormData from 'form-data';
 
 class DictToObj {
   constructor(dictionary) {
@@ -73,4 +73,4 @@ class AkenoAiJs {
   }
 }
 
-module.exports = AkenoPlus;
+export AkenoPlus;
