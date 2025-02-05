@@ -1,5 +1,5 @@
 {
-  "name": "akenoaijs",
+  "name": "akenoai-js",
   "version": "1.1.5",
   "description": "Scrapper AI all Downloader & User etc",
   "main": "index.js",
@@ -35,10 +35,6 @@
   ],
   "author": "@xtsea",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TeamKillerX/akenoai-js"
-  },
   "homepage": "https://buymeacoffee.com/randydev",
   "dependencies": {
     "axios": "*",
