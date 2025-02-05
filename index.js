@@ -73,4 +73,4 @@ class AkenoAiJs {
   }
 }
 
-export AkenoPlus;
+export { AkenoPlus };
