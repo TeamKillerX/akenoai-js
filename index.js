@@ -43,14 +43,22 @@ class AkenoaiJs {
         }
     }
 
-    async RandyDev(endpoint, custom_dev, params = {}) {
-        const response = await axios.get(`${this.apiEndpoint}/${endpoint}`, {
-            headers: this.headers,
-            params: params,
-        });
-        if (custom_dev === true) {
-            return response.data;
-        } else {
+    async RandyDev(endpoint, post = false, custom_dev = false, params = {}) {
+        try {
+            let response;
+            if (post) {
+                response = await axios.post(`${this.apiEndpoint}/${endpoint}`, params, {
+                    headers: this.headers,
+                });
+            } else {
+                response = await axios.get(`${this.apiEndpoint}/${endpoint}`, {
+                    headers: this.headers,
+                    params: params,
+                });
+            }
+            return custom_dev ? response.data : null;
+        } catch (error) {
+            console.error("Error:", error);
             return null;
         }
     }
