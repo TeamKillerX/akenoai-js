@@ -21,12 +21,11 @@ class DictToObj {
     return JSON.stringify(this);
   }
 }
-
-class AkenoPlus {
-  constructor(key = null, apiEndpoint = 'https://private-akeno.randydev.my.id') {
-    this.apiEndpoint = apiEndpoint;
-    this.headers = key ? { 'x-akeno-key': key } : {};
-    this.headersBlacklist = {};
+  
+class AkenoAiJs {
+  constructor(key = null) {
+    this.apiEndpoint = "https://randydev-ryu-js.hf.space/api/v1";
+    this.headers = key ? { 'x-api-key': key } : {};
   }
 
   async downloadNow(url) {
@@ -67,83 +66,6 @@ class AkenoPlus {
       headers: { ...this.headers, ...form.getHeaders() },
     });
     return response.data;
-  }
-
-  async terabox(link) {
-    return this.requestGet('akeno/terabox-v1', { link });
-  }
-
-  async teraboxV2(link) {
-    return this.requestGet('akeno/terabox-v2', { link });
-  }
-
-  async chatgptOld(query) {
-    return this.requestPost('ryuzaki/chatgpt-old', { query });
-  }
-
-  async chatgptModeWeb(query, params = {}) {
-    const combinedParams = { query, ...params };
-    return this.requestGet('api/akeno-ai-web', combinedParams);
-  }
-
-  async sitesTorrensAll() {
-    return this.requestGet('akeno/sites_torrens_all');
-  }
-
-  async searchForTorrents(params = {}) {
-    return this.requestGet('akeno/search_for_torrents', params);
-  }
-
-  async getTorrentFromUrl(params = {}) {
-    return this.requestGet('akeno/get_torrent_from_url', params);
-  }
-
-  async getRecent(params = {}) {
-    return this.requestGet('akeno/get_recent', params);
-  }
-
-  async getCategory(params = {}) {
-    return this.requestGet('akeno/get_category', params);
-  }
-
-  async paalSee(filePath, params = {}) {
-    return this.requestFormPost('akeno/paal-see', filePath, params);
-  }
-
-  async blackbox(query) {
-    return this.requestPost('ryuzaki/blackbox', { query });
-  }
-
-  async hentai() {
-    return this.requestGet('akeno/hentai');
-  }
-
-  async fbdown(link) {
-    return this.requestGet('akeno/fbdown-v2', { link });
-  }
-
-  async fdownloader(link) {
-    return this.requestGet('akeno/fdownloader', { link });
-  }
-
-  async capcut(link) {
-    return this.requestGet('akeno/capcut-v1', { link });
-  }
-
-  async addIpblock(ip) {
-    return this.requestPost('add_to_blacklist_ip', { ip });
-  }
-
-  async unblockIp(ip) {
-    return this.requestPost('remove_from_blacklist_ip', { ip });
-  }
-
-  async allowedIp(ip) {
-    return this.requestPost('update_allow_ip', { ip });
-  }
-
-  async unallowedIp(ip) {
-    return this.requestPost('remove_allow_ip', { ip });
   }
 
   async getJson(response) {
