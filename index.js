@@ -22,7 +22,7 @@ class DictToObj {
   }
 }
   
-class AkenoAiJs {
+class AkenoaiJs {
   constructor(key = null) {
     this.apiEndpoint = "https://randydev-ryu-js.hf.space/api/v1";
     this.headers = key ? { 'x-api-key': key } : {};
@@ -73,4 +73,4 @@ class AkenoAiJs {
   }
 }
 
-export { AkenoPlus };
+export { AkenoaiJs };
