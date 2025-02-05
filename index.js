@@ -44,11 +44,11 @@ class AkenoaiJs {
     }
 
     async RandyDev(endpoint, custom_dev, params = {}) {
-        if (custom_dev) {
-            const response = await axios.get(`${this.apiEndpoint}/${endpoint}`, {
-                headers: this.headers,
-                params: params,
-            });
+        const response = await axios.get(`${this.apiEndpoint}/${endpoint}`, {
+            headers: this.headers,
+            params: params,
+        });
+        if (custom_dev === true) {
             return response.data;
         } else {
             return null;
