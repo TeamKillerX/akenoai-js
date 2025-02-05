@@ -51,10 +51,10 @@ class AkenoaiJs {
             });
             return response.data;
         } else {
-            return null
+            return null;
         }
     }
-    
+
     async requestGet(endpoint, params = {}) {
         const response = await axios.get(`${this.apiEndpoint}/${endpoint}`, {
             headers: this.headers,
@@ -62,7 +62,7 @@ class AkenoaiJs {
         });
         return response.data;
     }
-    
+
     async requestPost(endpoint, data = {}, headers = {}) {
         const response = await axios.post(`${this.apiEndpoint}/${endpoint}`, data, {
             headers: { ...this.headers, ...headers },
