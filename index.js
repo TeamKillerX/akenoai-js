@@ -43,7 +43,7 @@ class AkenoaiJs {
         }
     }
 
-    async RandyDev(endpoint, post = false, custom_dev = false, params = {}) {
+    async RandyDev(endpoint, { post = false, custom_dev_fast = false } = {}, params = {}) {
         try {
             let response;
             if (post) {
@@ -56,11 +56,7 @@ class AkenoaiJs {
                     params: params,
                 });
             }
-            if (custom_dev) {
-                return response.data;
-            } else {
-                return null;
-            }
+            return custom_dev_fast ? response.data : null;
         } catch (error) {
             console.error("Error:", error);
             return null;
